@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     <!-- Link of CSS files -->
+     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+     <link rel="stylesheet" href="assets/css/boxicons.min.css">
+     <link rel="stylesheet" href="assets/css/remixicon.css">
+     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+     <link rel="stylesheet" href="assets/css/owl-theme-default-min.css">
+     <link rel="stylesheet" href="assets/css/odometer.min.css">
+     <link rel="stylesheet" href="assets/css/fancybox.css">
+     <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+     <link rel="stylesheet" href="assets/css/ion.rangeSlider.css">
+     <!-- <link rel="stylesheet" href="assets/css/aos.css"> -->
+     <link rel="stylesheet" href="assets/css/slick-theme.css">
+     <link rel="stylesheet" href="assets/css/style.css">
+     <link rel="stylesheet" href="assets/css/responsive.css">
+     <link rel="stylesheet" href="assets/css/dark-theme.css">
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=places&v=weekly"></script>
+     <script>
+         var autocomplete;
+         function initialize() {
+           autocomplete = new google.maps.places.Autocomplete(
+               /** @type {HTMLInputElement} */(document.getElementById('autocomplete')),
+               { types: ['geocode'] });
+           google.maps.event.addListener(autocomplete, 'place_changed', function() {
+           });
+         }
+     </script>
+     <title>Real Estate</title>
+     <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+
+    <!-- Title Page-->
+    <title>Dashboard</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="assets/css/font-face.css" rel="stylesheet" media="all">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="assets/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="assets/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="assets/css/bootstrap_sec.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <!-- <link href="assets/css/animsition.min.css" rel="stylesheet" media="all"> -->
+    <link href="assets/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="assets/css/animate.css" rel="stylesheet" media="all">
+    <link href="assets/css/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="assets/css/slick.css" rel="stylesheet" media="all">
+    <link href="assets/css/select2.min.css" rel="stylesheet" media="all">
+    <link href="assets/css/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="assets/css/account.css" rel="stylesheet" media="all">
+
+</head>
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER MOBILE-->
+        <header class="header-mobile d-block d-lg-none">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                       
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar-mobile">
+                <div class="container-fluid">
+                    <ul class="navbar-mobile__list list-unstyled">
+                        
+                        <li>
+                            <a href="index.html">
+                                <i class="fas fa-chart-bar"></i>Головна сторінка</a>
+                        </li>
+                        <li>
+                            <a href="#profile">
+                                <i class="fas fa-chart-bar"></i>Профіль</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="#my_objects">
+                                <i class="fas fa-table"></i>Мої оголошення</a>
+                        </li>
+                        <li>
+                            <a href="#statistic">
+                                <i class="far fa-check-square"></i>Статистика</a>
+                        </li>
+                        <li>
+                            <a href="#liked">
+                                <i class="far fa-check-square"></i>Обране</a>
+                        </li>
+                        <li>
+                            <a href="submit-property.html">
+                                <i class="fas fa-calendar-alt"></i>Додати оголошення</a>
+                        </li>
+                        <li>
+                            <a href="my-account.html">
+                                <i class="fas fa-map-marker-alt"></i>Вийти</a>
+                        </li>
+                        <!-- <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-copy"></i>Pages</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="login.html">Login</a>
+                                </li>
+                                <li>
+                                    <a href="register.html">Register</a>
+                                </li>
+                                <li>
+                                    <a href="forget-pass.html">Forget Password</a>
+                                </li>
+                            </ul>
+                        </li> -->
+                        <!-- <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-desktop"></i>UI Elements</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                
+                                <li>
+                                    <a href="card.html">Cards</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="fontawesome.html">Fontawesome Icon</a>
+                                </li>
+                                
+                            </ul>
+                        </li> -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- END HEADER MOBILE-->
+
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar d-none d-lg-block">
+           
+            <div class="menu-sidebar__content js-scrollbar1">
+                <nav class="navbar-sidebar">
+                    
+                    <ul class="list-unstyled navbar__list">
+                        <li>
+                            <a href="index.html">
+                                <img src="assets/img/icon/left.png" style="width: 20px; height: 20px; margin-right: 10px;">Головна сторінка</a>
+                        </li>
+                        <li>
+                            <a href="#profile">
+                                <img src="assets/img/icon/profile.png" style="width: 20px; height: 20px; margin-right: 10px;">Профіль</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="#my_objects">
+                                <img src="assets/img/icon/estate.png" style="width: 20px; height: 20px; margin-right: 10px;">Мої оголошення</a>
+                        </li>
+                        <li>
+                            <a href="#statistic">
+                                <img src="assets/img/icon/graph.png" style="width: 20px; height: 20px; margin-right: 10px;">Статистика</a>
+                        </li>
+                        <li>
+                            <a href="#liked">
+                                <img src="assets/img/icon/like.png" style="width: 20px; height: 20px; margin-right: 10px;">Обране</a>
+                        </li>
+                        <li>
+                            <a href="submit-property.html">
+                                <img src="assets/img/icon/add.png" style="width: 20px; height: 20px; margin-right: 10px;">Додати оголошення</a>
+                        </li>
+                        <li>
+                            <a href="my-account.html">
+                                <img src="assets/img/icon/log-out.png" style="width: 20px; height: 20px; margin-right: 10px;">Вийти</a>
+                        </li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <!-- END MENU SIDEBAR-->
+
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop">
+               
+                
+                <a class="navbar-brand" href="index.html">
+                    <img class="logo-light" src="assets/img/logo1.png" width="170" height="70" alt="logo">
+                    
+                </a>
+
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- HEADER DESKTOP-->
+
+            <!-- MAIN CONTENT-->
+
+
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row" >
+
+                            
+
+                           
+
+                            <div class="col-md-12" id="profile">
+                                <div class="overview-wrap">
+                                    <h2 class="title-1">Особистий кабінет</h2>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+<!-- Картка  -->
+                        <div class="col-md-4">
+                            <aside class="profile-nav alt">
+                                <section class="card">
+                                    <div class="card-header user-header alt bg-dark">
+                                        <div class="media">
+                                            <a href="#">
+                                                <img class="align-self-center rounded-circle mr-3" style="width:85px; height:85px;" alt="" src="assets/img/icon/R.png">
+                                            </a>
+                                            <div class="media-body">
+                                                <h2 class="text-light display-6">Jim Doe</h2>
+                                                <p style="
+                                                color: #a19f9f;
+                                                font-size: 18px;">Персональні дані</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item" style="display: flex; align-items: center; height: 100px;">
+                                            <a href="#" style="display: flex; align-items: center;">
+                                                <img src="assets/img/icon/mail.svg" alt="Опис зображення" style="width: 35px; height: 35px; margin-right: 20px;">
+                                                <p class="description-user" style="margin: 0;">qwerty@gmail.com</p>
+                                                <!-- <span class="badge badge-primary pull-right">10</span> -->
+                                            </a>
+                                        </li>
+                                        
+                                        <li class="list-group-item" style="display: flex; align-items: center; height: 100px;">
+                                            <a href="#" style="display: flex; align-items: center;">
+                                                <img src="assets/img/icon/telephone.svg" alt="Опис зображення" style="width: 35px; height: 35px; margin-right: 20px;">
+                                                <p class="description-user" style="margin: 0;"> +(380)11-111-11-11</p>
+                                                <!-- <span class="badge badge-primary pull-right">10</span> -->
+                                            </a>
+                                        </li>
+                                        
+                                        <li class="list-group-item" style="display: flex; align-items: center;height: 100px;">
+                                            <a href="#" style="display: flex; align-items: center;">
+                                                <img src="assets/img/icon/list.svg" alt="Опис зображення" style="width: 35px; height: 35px; margin-right: 20px;">
+                                                <p class="description-user" style="margin: 0;">23.08.1999</p>
+                                                <!-- <span class="badge badge-primary pull-right">10</span> -->
+                                            </a>
+                                        </li>
+                                       
+                                    </ul>
+
+                                </section>
+                            </aside>
+                        </div>
+
+<!-- Ще одна картка  -->
+                       
+<div class="col-md-12">
+                            <div class="overview-wrap" id="my_objects">
+                                <h2 class="title-1">Мої оголошення</h2>
+                                
+                            </div>
+                        </div>
+
+                        <div class="row" style="
+                        margin-bottom: 90px;
+                    ">
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="property-item" data-aos="fade-up"
+                                data-aos-duration="1200">
+                                <!-- №1 -->
+                                            <div class="property-image bg-overlay-gradient-04">
+                                                <img class="img-fluid" src="assets/img/property/property-1.jpg" alt="">
+                                                <div class="property-lable">
+                                                    <span class="badge badge-md bg-primary">Оренда</span>
+                                                    <span class="badge badge-md bg-info">Нове</span>
+                                                </div>
+                                                <span class="property-trending" title="Trending"><i class="bx bxs-bolt"></i></span>
+                                               
+                                            </div>
+                                            <div class="property-details">
+                                                <div class="property-details-inner">
+                                                    <h5 class="property-title">
+                                                        <a href="properties-details.html">Ексклюзивне Бунгало з двома спальнями</a>
+                                                    </h5>
+                                                    <span class="property-address">
+                                                        <i class="bx bx-location-plus"></i>Київ
+                                                    </span>
+                                                    <span class="property-agent-date"><i class="bx bx-time"></i>1 тиждень тому</span>
+                                                    <div class="property-price">
+                                                        ₴20 000<span> / місяць</span>
+                                                    </div>
+                                                    <ul class="property-info list-unstyled d-flex">
+                                                        <li class="flex-fill property-bed">
+                                                            <i class="bx bx-bed"></i>
+                                                            Кімнати<span>2</span>
+                                                        </li>
+                                                        <li class="flex-fill property-bath">
+                                                            <i class="bx bx-bath"></i>
+                                                            Ванна<span>2</span></li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                                <div class="property-btn">
+                                                    <a class="property-link" href="properties-details.html">Дізнатися більше</a>
+                                                    <ul class="property-listing-actions list-unstyled mb-0">
+                                                        <li class="property-favourites">
+                                                            <a data-bs-toggle="tooltip" data-placement="top" title="Favourite" href="#" data-bs-original-title="Favourite" aria-label="Favourite">
+                                                                <i class="bx bx-heart"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- №2 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="property-item" data-aos="fade-up"
+                                data-aos-duration="1400">
+                                            <div class="property-image bg-overlay-gradient-04">
+                                                <img class="img-fluid" src="assets/img/property/property-2.jpg" alt="">
+                                                <div class="property-lable">
+                                                    <span class="badge badge-md bg-success">Продаж</span>
+                                                    <span class="badge badge-md bg-info">Нове</span>
+                                                </div>
+                                                <span class="property-trending" title="Trending"><i class="bx bxs-bolt"></i></span>
+                                                
+                                            </div>
+                                            <div class="property-details">
+                                                <div class="property-details-inner">
+                                                    <h5 class="property-title">
+                                                        <a href="properties-details.html">Сучасна вілла з власним басейном і садом</a>
+                                                    </h5>
+                                                    <span class="property-address">
+                                                        <i class="bx bx-location-plus"></i>Львів
+                                                    </span>
+                                                    <span class="property-agent-date"><i class="bx bx-time"></i>3 тижня тому</span>
+                                                    <div class="property-price">
+                                                        ₴1 000 000
+                                                    </div>
+                                                    <ul class="property-info list-unstyled d-flex">
+                                                        <li class="flex-fill property-bed">
+                                                            <i class="bx bx-bed"></i>
+                                                            Кімнати<span>3</span>
+                                                        </li>
+                                                        <li class="flex-fill property-bath">
+                                                            <i class="bx bx-bath"></i>
+                                                            Ванни<span>1</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="property-btn">
+                                                    <a class="property-link" href="properties-details.html">Дізнатися більше</a>
+                                                    <ul class="property-listing-actions list-unstyled mb-0">
+                                                        <li class="property-favourites">
+                                                            <a data-bs-toggle="tooltip" data-placement="top" title="Favourite" href="#" data-bs-original-title="Favourite" aria-label="Favourite">
+                                                                <i class="bx bx-heart"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- №3 -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="property-item" data-aos="fade-up"
+                                data-aos-duration="1600">
+                                            <div class="property-image bg-overlay-gradient-04">
+                                                <img class="img-fluid" src="assets/img/property/property-3.jpg" alt="">
+                                                <div class="property-lable">
+                                                    <span class="badge badge-md bg-primary">Оренда</span>
+                                                    <span class="badge badge-md bg-info">Нове</span>
+                                                </div>
+                                                <span class="property-trending" title="Trending"><i class="bx bxs-bolt"></i></span>
+                                                <!-- <div class="property-agent">
+                                                    <div class="property-agent-image">
+                                                        <a href="agent-details.html">
+                                                            <img class="img-fluid" src="assets/img/team/team-3.jpg" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="property-agent-info">
+                                                        <a class="property-agent-name" href="agent-details.html">Sarah Cooper</a>
+                                                        <span class="d-block">Commercial Investment Member</span>
+                                                        <ul class="property-agent-contact list-unstyled">
+                                                            <li>
+                                                                <a href="#"><i class="bx bx-mobile"></i></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#"><i class="bx bx-envelope"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="property-agent-popup">
+                                                    <a href="#"><i class="bx bxs-camera"></i>12</a>
+                                                </div> -->
+                                            </div>
+                                            <div class="property-details">
+                                                <div class="property-details-inner">
+                                                    <h5 class="property-title">
+                                                        <a href="properties-details.html">Простора вілла з видом на гори і озеро</a>
+                                                    </h5>
+                                                    <span class="property-address">
+                                                        <i class="bx bx-location-plus"></i>Харків
+                                                    </span>
+                                                    <span class="property-agent-date"><i class="bx bx-time"></i>2 тижні тому</span>
+                                                    <div class="property-price">
+                                                        ₴25 000<span> / місяць</span>
+                                                    </div>
+                                                    <ul class="property-info list-unstyled d-flex">
+                                                        <li class="flex-fill property-bed">
+                                                            <i class="bx bx-bed"></i>
+                                                            Кімнати<span>4</span>
+                                                        </li>
+                                                        <li class="flex-fill property-bath">
+                                                            <i class="bx bx-bath"></i>
+                                                            Ванни<span>1</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="property-btn">
+                                                    <a class="property-link" href="properties-details.html">Дізнатися більше</a>
+                                                    <ul class="property-listing-actions list-unstyled mb-0">
+                                                        <li class="property-favourites">
+                                                            <a data-bs-toggle="tooltip" data-placement="top" title="Favourite" href="#" data-bs-original-title="Favourite" aria-label="Favourite">
+                                                                <i class="bx bx-heart"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-12" id="statistic">
+                            <div class="overview-wrap">
+                                <h2 class="title-1">Статистика</h2>
+                                
+                            </div>
+                        </div>
+                        <div class="row m-t-25">
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="overview-item overview-item--c1">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix" style="
+                                        width: 220px;
+                                        height: 160px;
+                                        display: flex;">
+                                            <div class="icon">
+                                                <img src="assets/img/icon/user.png" alt="" style="width: 55px; height: 55px;">
+                                            </div>
+                                            <div class="text">
+                                                <h2>10368</h2>
+                                                <span>Задоволених клієнтів</span>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="overview-chart">
+                                            
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="overview-item overview-item--c2">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix" style="
+                                        width: 220px;
+                                        height: 160px;
+                                    ">
+                                            <div class="icon">
+                                                <img src="assets/img/icon/buy.png"  style="width: 55px; height: 55px;">
+                                            </div>
+                                            <div class="text">
+                                                <h2>388,688</h2>
+                                                <span>Успішних угод</span>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="overview-chart">
+                                            <canvas id="widgetChart2"></canvas>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="overview-item overview-item--c4">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix" style="
+                                        width: 220px;
+                                        height: 160px;
+                                    ">
+                                            <div class="icon">
+                                                <img src="assets/img/icon/dollar.png" alt=""  style="width: 55px; height: 55px;">
+                                            </div>
+                                            <div class="text">
+                                                <h2>100 000</h2>
+                                                <span>Донатів на ЗСУ</span>
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                    
+                        <div class="col-md-12" id="liked">
+                            <div class="overview-wrap">
+                                <h2 class="title-1">Обрана нерухомість</h2>
+                                
+                            </div>
+                        </div>
+                        
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+           
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="property-item" data-aos="fade-up"
+                    data-aos-duration="1200">
+                    <!-- №1 -->
+                                <div class="property-image bg-overlay-gradient-04">
+                                    <img class="img-fluid" src="assets/img/property/property-1.jpg" alt="">
+                                    <div class="property-lable">
+                                        <span class="badge badge-md bg-primary">Оренда</span>
+                                        <span class="badge badge-md bg-info">Нове</span>
+                                    </div>
+                                    <span class="property-trending" title="Trending"><i class="bx bxs-bolt"></i></span>
+                                   
+                                </div>
+                                <div class="property-details">
+                                    <div class="property-details-inner">
+                                        <h5 class="property-title">
+                                            <a href="properties-details.html">Ексклюзивне Бунгало з двома спальнями</a>
+                                        </h5>
+                                        <span class="property-address">
+                                            <i class="bx bx-location-plus"></i>Київ
+                                        </span>
+                                        <span class="property-agent-date"><i class="bx bx-time"></i>1 тиждень тому</span>
+                                        <div class="property-price">
+                                            ₴20 000<span> / місяць</span>
+                                        </div>
+                                        <ul class="property-info list-unstyled d-flex">
+                                            <li class="flex-fill property-bed">
+                                                <i class="bx bx-bed"></i>
+                                                Кімнати<span>2</span>
+                                            </li>
+                                            <li class="flex-fill property-bath">
+                                                <i class="bx bx-bath"></i>
+                                                Ванна<span>2</span></li>
+                                            
+                                        </ul>
+                                    </div>
+                                    <div class="property-btn">
+                                        <a class="property-link" href="properties-details.html">Дізнатися більше</a>
+                                        <ul class="property-listing-actions list-unstyled mb-0">
+                                            <li class="property-favourites">
+                                                <a data-bs-toggle="tooltip" data-placement="top" title="Favourite" href="#" data-bs-original-title="Favourite" aria-label="Favourite">
+                                                    <i class="bx bx-heart"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- №2 -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="property-item" data-aos="fade-up"
+                    data-aos-duration="1400">
+                                <div class="property-image bg-overlay-gradient-04">
+                                    <img class="img-fluid" src="assets/img/property/property-2.jpg" alt="">
+                                    <div class="property-lable">
+                                        <span class="badge badge-md bg-success">Продаж</span>
+                                        <span class="badge badge-md bg-info">Нове</span>
+                                    </div>
+                                    <span class="property-trending" title="Trending"><i class="bx bxs-bolt"></i></span>
+                                    
+                                </div>
+                                <div class="property-details">
+                                    <div class="property-details-inner">
+                                        <h5 class="property-title">
+                                            <a href="properties-details.html">Сучасна вілла з власним басейном і садом</a>
+                                        </h5>
+                                        <span class="property-address">
+                                            <i class="bx bx-location-plus"></i>Львів
+                                        </span>
+                                        <span class="property-agent-date"><i class="bx bx-time"></i>3 тижня тому</span>
+                                        <div class="property-price">
+                                            ₴1 000 000
+                                        </div>
+                                        <ul class="property-info list-unstyled d-flex">
+                                            <li class="flex-fill property-bed">
+                                                <i class="bx bx-bed"></i>
+                                                Кімнати<span>3</span>
+                                            </li>
+                                            <li class="flex-fill property-bath">
+                                                <i class="bx bx-bath"></i>
+                                                Ванни<span>1</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="property-btn">
+                                        <a class="property-link" href="properties-details.html">Дізнатися більше</a>
+                                        <ul class="property-listing-actions list-unstyled mb-0">
+                                            <li class="property-favourites">
+                                                <a data-bs-toggle="tooltip" data-placement="top" title="Favourite" href="#" data-bs-original-title="Favourite" aria-label="Favourite">
+                                                    <i class="bx bx-heart"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- №3 -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="property-item" data-aos="fade-up"
+                    data-aos-duration="1600">
+                                <div class="property-image bg-overlay-gradient-04">
+                                    <img class="img-fluid" src="assets/img/property/property-3.jpg" alt="">
+                                    <div class="property-lable">
+                                        <span class="badge badge-md bg-primary">Оренда</span>
+                                        <span class="badge badge-md bg-info">Нове</span>
+                                    </div>
+                                    <span class="property-trending" title="Trending"><i class="bx bxs-bolt"></i></span>
+                                    <!-- <div class="property-agent">
+                                        <div class="property-agent-image">
+                                            <a href="agent-details.html">
+                                                <img class="img-fluid" src="assets/img/team/team-3.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="property-agent-info">
+                                            <a class="property-agent-name" href="agent-details.html">Sarah Cooper</a>
+                                            <span class="d-block">Commercial Investment Member</span>
+                                            <ul class="property-agent-contact list-unstyled">
+                                                <li>
+                                                    <a href="#"><i class="bx bx-mobile"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="bx bx-envelope"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="property-agent-popup">
+                                        <a href="#"><i class="bx bxs-camera"></i>12</a>
+                                    </div> -->
+                                </div>
+                                <div class="property-details">
+                                    <div class="property-details-inner">
+                                        <h5 class="property-title">
+                                            <a href="properties-details.html">Простора вілла з видом на гори і озеро</a>
+                                        </h5>
+                                        <span class="property-address">
+                                            <i class="bx bx-location-plus"></i>Харків
+                                        </span>
+                                        <span class="property-agent-date"><i class="bx bx-time"></i>2 тижні тому</span>
+                                        <div class="property-price">
+                                            ₴25 000<span> / місяць</span>
+                                        </div>
+                                        <ul class="property-info list-unstyled d-flex">
+                                            <li class="flex-fill property-bed">
+                                                <i class="bx bx-bed"></i>
+                                                Кімнати<span>4</span>
+                                            </li>
+                                            <li class="flex-fill property-bath">
+                                                <i class="bx bx-bath"></i>
+                                                Ванни<span>1</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="property-btn">
+                                        <a class="property-link" href="properties-details.html">Дізнатися більше</a>
+                                        <ul class="property-listing-actions list-unstyled mb-0">
+                                            <li class="property-favourites">
+                                                <a data-bs-toggle="tooltip" data-placement="top" title="Favourite" href="#" data-bs-original-title="Favourite" aria-label="Favourite">
+                                                    <i class="bx bx-heart"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </d
+        </div>
+            <!-- END MAIN CONTENT-->
+            <!-- END PAGE CONTAINER-->
+        </div>
+
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="assets/js/slick_sec.min.js">
+    </script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/animsition.min.js"></script>
+    <script src="assets/js/bootstrap-progressbar.min.js">
+    </script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/counterup.min.js">
+    </script>
+    <script src="assets/js/circle-progress.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="vendor/select2/select2.min.js">
+    </script>
+
+    <!-- Main JS-->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
+<!-- end document-->
