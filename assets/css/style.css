@@ -4,9 +4,7 @@ Template Name: Emlak - Real Estate, Architecture, and Construction HTML Website 
 Author: MhrTheme
 Version: 1.0.0
 
-* This file contains the styling for the actual template, this
-is the file you need to edit to change the look of the
-Template.
+
 
 /*
 
@@ -6627,4 +6625,12 @@ Slider Area CSS
   .auto-container {
     max-width: 1000px;
   }
+}
+
+
+.success {
+  color: green;
+}
+.error {
+  color: red;
 }

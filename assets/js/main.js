@@ -1,12 +1,12 @@
 (function ($) {
     "use strict";
     
-    // Preloader
+    // Прелоадер
     $(window).on('load', function (event) {
         $('.js-preloader').delay(500).fadeOut(500);
     });
     
-    // Open Search Box
+    // Пошукове поле
     $('.searchbtn').on('click', function() {
         $('.search-area').toggleClass('open');
     });
@@ -14,7 +14,7 @@
         $('.search-area').removeClass('open');
     });
 
-    // Language Dropdown
+    // Випадаюче меню мов
     $(".language-option").each(function () {
         var each = $(this)
         each.find(".lang-name").html(each.find(".language-dropdown-menu a:nth-child(1)").text());
@@ -26,7 +26,7 @@
         });
     })
 
-    // Sticky Header
+    // Фіксована шапка
     var wind = $(window);
     var sticky = $('.header-wrap');
     wind.on('scroll', function () {
@@ -38,7 +38,7 @@
         }
     });
 
-    // Responsive Menu
+    // Респонсивне меню
     $(window).on('resize', function() {
         if($(window).width() <= 1199) {
             $('.collapse.navbar-collapse').removeClass('collapse');
@@ -111,12 +111,12 @@
         $('.accordion-title').not($(this)).removeClass('active');       
     });
 
-    // Contact Form Script
+    // Контактна форма
     var form = $('.contact__form'),
         message = $('.contact__msg'),
         form_data;
 
-    // Success Function
+    // Успіх
     function done_func(response) {
         message.fadeIn().removeClass('alert-danger').addClass('alert-success');
         message.text(response);
@@ -126,7 +126,7 @@
         form.find('input:not([type="submit"]), textarea').val('');
     }
 
-    // Fail Function
+    // Помилка
     function fail_func(data) {
         message.fadeIn().removeClass('alert-success').addClass('alert-success');
         message.text(data.responseText);
@@ -147,7 +147,7 @@
         .fail(fail_func);
     });
     
-    // Testimonial Slider
+    // Слайдер
     $('.testimonial-slider').owlCarousel({
         nav: true,
         loop: true,
@@ -255,7 +255,7 @@
         }
     });
 
-    //Back To Top
+    //Кнопка "Вгору"
     function BackToTop() {
         $('.back-to-top').on('click', function () {
             $('html, body').animate({

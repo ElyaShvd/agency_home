@@ -255,9 +255,7 @@
                                             Про нас
                                         </a>
                                     </li>
-                                    <li class="nav-item d-lg-none">
-                                        <a href="booking.html" class="nav-link btn style1">бук нав ?</a>
-                                    </li>
+                                    
                                 </ul>
                                 <div class="other-options md-none">
                                     <div class="option-item">
@@ -324,31 +322,33 @@
                             <div class="col-lg-6 col-md-12 col-sm-12 col-12">
                                 <div class="custom-card">
                                     <h2 class="section-title title">Увійти</h2>
-                                    <input type="email" class="form-control" placeholder="Email" required>
-                                    <input type="password" class="form-control" placeholder="Пароль" required>
+                                    <input type="email" id="login-email" class="form-control" placeholder="Email" required>
+                                    <input type="password" id="login-password" class="form-control" placeholder="Пароль" required>
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked1">
                                         <label class="form-check-label" for="flexCheckChecked1">
                                             Запам'ятати пароль
                                         </label>
                                     </div>
-                                    <button class="blue-btn">Увійти</button>
+                                    <button class="blue-btn" onclick="login()">Увійти</button>
+                                    <p id="loginResponseMessage"></p>
                                 </div>
                             </div>
-
+            
                             <div class="col-lg-6 col-md-12 col-sm-12 col-12">
                                 <div class="custom-card">
                                     <h2 class="section-title title">Зареєструватися</h2>
-                                    <input type="text" class="form-control" placeholder="Ім'я" Required>
-                                    <input type="email" class="form-control" placeholder="Email" Required>
-                                    <input type="password" class="form-control" placeholder="Пароль" Required>
+                                    <input type="text" id="name" class="form-control" placeholder="Ім'я" required>
+                                    <input type="email" id="email" class="form-control" placeholder="Email" required>
+                                    <input type="password" id="password" class="form-control" placeholder="Пароль" required>
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2">
                                         <label class="form-check-label" for="flexCheckChecked2">
                                            Я приймаю усі положення <a href="privacy-policy.html">політики конфіденційності</a>.
                                         </label>
                                     </div>
-                                    <button class="blue-btn">Зареєструвати</button>
+                                    <button class="blue-btn" onclick="register()">Зареєструвати</button>
+                                    <p id="registerResponseMessage"></p>
                                 </div>
                             </div>
                         </div>
@@ -503,6 +503,119 @@
         <script src="assets/js/slick.min.js"></script>
         <script src="assets/js/jquery.appear.js"></script>
         <script src="assets/js/main.js"></script>
+        <script>
+            // Функція для входу
+            async function login() {
+                const email = document.getElementById('login-email').value;
+                const password = document.getElementById('login-password').value;
+                const responseMessage = document.getElementById('loginResponseMessage');
+            
+                responseMessage.textContent = '';
+                responseMessage.classList.remove('success', 'error');
+            
+                if (!email || !password) {
+                    responseMessage.textContent = 'Будь ласка, заповніть усі поля';
+                    responseMessage.classList.add('error');
+                    return;
+                }
+            
+                try {
+                    const response = await fetch('http://home-agency.api.voloshin.website/login', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ email, password })
+                    });
+            
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+            
+                    const result = await response.json();
+            
+                    if (result.status === 'done') {
+                        responseMessage.textContent = 'Успішний вхід';
+                        responseMessage.classList.add('success');
+                        localStorage.setItem('email', email);
+                        if (result.data && result.data.name) {
+                            localStorage.setItem('name', result.data.name);
+                        }
+                        window.location.href = 'account.html'; // перенаправлення на сторінку особистого кабінету
+                    } else {
+                        responseMessage.textContent = result.message || 'Сталася помилка при вході';
+                        responseMessage.classList.add('error');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    responseMessage.textContent = 'Сталася помилка при вході';
+                    responseMessage.classList.add('error');
+                }
+            }
+            
+            // Функція для реєстрації
+            async function register() {
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                const responseMessage = document.getElementById('registerResponseMessage');
+            
+                responseMessage.textContent = '';
+                responseMessage.classList.remove('success', 'error');
+            
+                if (!name || !email || !password) {
+                    responseMessage.textContent = 'Будь ласка, заповніть усі поля';
+                    responseMessage.classList.add('error');
+                    return;
+                }
+            
+                try {
+                    const response = await fetch('http://home-agency.api.voloshin.website/register', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ name, email, password })
+                    });
+            
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+            
+                    const result = await response.json();
+            
+                    if (result.status === 'done') {
+                        responseMessage.textContent = 'Успішна реєстрація';
+                        responseMessage.classList.add('success');
+                        
+                    } else {
+                        responseMessage.textContent = result.message || 'Сталася помилка при реєстрації';
+                        responseMessage.classList.add('error');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    responseMessage.textContent = 'Сталася помилка при реєстрації';
+                    responseMessage.classList.add('error');
+                }
+            }
+            
+            // Вивід збережених даних при завантаженні сторінки
+            document.addEventListener('DOMContentLoaded', function() {
+                const name = localStorage.getItem('name');
+                const email = localStorage.getItem('email');
+            
+                if (name) {
+                    document.getElementById('user-name').textContent = name;
+                }
+            
+                if (email) {
+                    document.getElementById('user-email').textContent = email;
+                }
+            });
+            </script>
+            
+            
+       
     </body>
 
 </html>

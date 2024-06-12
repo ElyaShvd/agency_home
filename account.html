@@ -30,7 +30,7 @@
          }
      </script>
      <title>Real Estate</title>
-     <link rel="icon" type="image/png" href="assets/img/favicon.png">
+     <link rel="icon" type="image/png" href="assets/img/icon/blue_home.png">
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -237,55 +237,49 @@
                             </div>
                         </div>
 
-<!-- Картка  -->
-                        <div class="col-md-4">
-                            <aside class="profile-nav alt">
-                                <section class="card">
-                                    <div class="card-header user-header alt bg-dark">
-                                        <div class="media">
-                                            <a href="#">
-                                                <img class="align-self-center rounded-circle mr-3" style="width:85px; height:85px;" alt="" src="assets/img/icon/R.png">
-                                            </a>
-                                            <div class="media-body">
-                                                <h2 class="text-light display-6">Олена Гумен</h2>
-                                                <p style="
-                                                color: #a19f9f;
-                                                font-size: 18px;">Персональні дані</p>
+                                <!-- Картка  -->
+
+
+                            <div class="col-md-4">
+                                <aside class="profile-nav alt">
+                                    <section class="card">
+                                        <div class="card-header user-header alt bg-dark">
+                                            <div class="media">
+                                                <a href="#">
+                                                    <img class="align-self-center rounded-circle mr-3" style="width:85px; height:85px;" alt="" src="assets/img/icon/R.png">
+                                                </a>
+                                                <div class="media-body">
+                                                    <h2 class="text-light display-6" id="user-name">Олена Гумен</h2>
+                                                    <p style="color: #a19f9f; font-size: 18px;">Персональні дані</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item" style="display: flex; align-items: center; height: 100px;">
-                                            <a href="#" style="display: flex; align-items: center;">
-                                                <img src="assets/img/icon/mail.svg" alt="Опис зображення" style="width: 35px; height: 35px; margin-right: 20px;">
-                                                <p class="description-user" style="margin: 0;">qwerty@gmail.com</p>
-                                                <!-- <span class="badge badge-primary pull-right">10</span> -->
-                                            </a>
-                                        </li>
-                                        
-                                        <li class="list-group-item" style="display: flex; align-items: center; height: 100px;">
-                                            <a href="#" style="display: flex; align-items: center;">
-                                                <img src="assets/img/icon/telephone.svg" alt="Опис зображення" style="width: 35px; height: 35px; margin-right: 20px;">
-                                                <p class="description-user" style="margin: 0;"> +(380)11-111-11-11</p>
-                                                <!-- <span class="badge badge-primary pull-right">10</span> -->
-                                            </a>
-                                        </li>
-                                        
-                                        <li class="list-group-item" style="display: flex; align-items: center;height: 100px;">
-                                            <a href="#" style="display: flex; align-items: center;">
-                                                <img src="assets/img/icon/list.svg" alt="Опис зображення" style="width: 35px; height: 35px; margin-right: 20px;">
-                                                <p class="description-user" style="margin: 0;">23.08.1999</p>
-                                                <!-- <span class="badge badge-primary pull-right">10</span> -->
-                                            </a>
-                                        </li>
-                                       
-                                    </ul>
-
-                                </section>
-                            </aside>
-                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item" style="display: flex; align-items: center; height: 100px;">
+                                                <a href="#" style="display: flex; align-items: center;">
+                                                    <img src="assets/img/icon/mail.svg" alt="Опис зображення" style="width: 35px; height: 35px; margin-right: 20px;">
+                                                    <p class="description-user" id="user-email" style="margin: 0;">qwerty@gmail.com</p>
+                                                </a>
+                                            </li>
+                                            
+                                            <li class="list-group-item" style="display: flex; align-items: center; height: 100px;">
+                                                <a href="#" style="display: flex; align-items: center;">
+                                                    <img src="assets/img/icon/telephone.svg" alt="Опис зображення" style="width: 35px; height: 35px; margin-right: 20px;">
+                                                    <p class="description-user" style="margin: 0;"> +(380)11-111-11-11</p>
+                                                </a>
+                                            </li>
+                                            
+                                            <li class="list-group-item" style="display: flex; align-items: center;height: 100px;">
+                                                <a href="#" style="display: flex; align-items: center;">
+                                                    <img src="assets/img/icon/list.svg" alt="Опис зображення" style="width: 35px; height: 35px; margin-right: 20px;">
+                                                    <p class="description-user" style="margin: 0;">23.08.1999</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </section>
+                                </aside>
+                            </div>
 
 <!-- Ще одна картка  -->
                        
@@ -760,8 +754,25 @@
     <script src="vendor/select2/select2.min.js">
     </script>
 
+
+
     <!-- Main JS-->
     <script src="js/main.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const name = localStorage.getItem('name');
+            const email = localStorage.getItem('email');
+
+            if (name) {
+                document.getElementById('user-name').textContent = name;
+            }
+
+            if (email) {
+                document.getElementById('user-email').textContent = email;
+            }
+        });
+    </script>
 
 </body>
 
